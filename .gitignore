@@ -1,7 +1,12 @@
 .claude/
-.gradle/
 .idea/
-build/
-*.iml
-local.properties
+.godot/
+.mono/
+bin/
+obj/
+*.user
+*.tmp
+*.uid
+*.import
 img/
+_archive_korge/
