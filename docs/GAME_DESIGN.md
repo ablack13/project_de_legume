@@ -9,51 +9,49 @@
 
 ---
 
-## Технічний стек
+## Tech Stack
 
-| Компонент | Вибір | Чому |
-|-----------|-------|------|
-| **Мова** | Kotlin | Type-safe, coroutines, multiplatform |
-| **Фреймворк** | KorGE 6.0 | Kotlin-native 2D рушій. Кросплатформа (Desktop/Android/iOS/Web) |
-| **Збірка** | Gradle (Kotlin DSL) + KorGE plugin | Автоматична multiplatform конфігурація |
-| **Платформа** | Desktop (JVM) | Основна платформа для розробки, інші додаються одним рядком |
+| Component | Choice |
+|-----------|--------|
+| **Language** | C# |
+| **Engine** | Godot 4.6.2 (.NET) |
+| **Serialization** | System.Text.Json (built-in) |
+| **Platform** | Desktop (Windows/macOS/Linux) — mobile/web export ready |
 
-Детальна довідка по KorGE: [KGE.md](KGE.md)
+Migration details: [MIGRATION_GODOT.md](MIGRATION_GODOT.md)
 
 ---
 
-## Архітектура (актуальна)
+## Architecture
 
 ```
-src/commonMain/kotlin/
-  ├── Main.kt                      # Точка входу, Korge { ... }
-  ├── scene/
-  │   └── GameScene.kt             # Основна ігрова сцена, game loop, UI інтеграція
-  ├── world/
-  │   ├── GameWorld.kt             # Карта 80x60, генерація міста, рендер тайлів
-  │   └── ContainerManager.kt      # Лут-контейнери: пошук, відкриття, вилучення
+scripts/
+  ├── GameManager.cs                # Main controller: init, game loop, input handling
   ├── player/
-  │   ├── Player.kt                # Спрайт, рух відносно погляду, колізії
-  │   └── PlayerStats.kt           # HP, Голод, Спрага, Втома — логіка виживання
+  │   ├── Player.cs                 # CharacterBody2D: movement, collision, facing
+  │   └── PlayerStats.cs            # HP, Hunger, Thirst, Fatigue logic
+  ├── world/
+  │   ├── MapGenerator.cs           # City map generation (80x60)
+  │   ├── TileSetGenerator.cs       # Programmatic tileset image (21 tiles)
+  │   ├── ContainerManager.cs       # Loot containers: scan, open, take
+  │   └── LootTable.cs              # Weighted probability tables
   ├── inventory/
-  │   ├── Item.kt                  # ItemDef (з JSON) + ItemStack + localizedName
-  │   ├── ItemRegistry.kt          # Завантаження items.json
-  │   ├── Inventory.kt             # Інвентар гравця (вага, стакання)
-  │   └── LootTable.kt             # Таблиці ймовірностей для контейнерів
+  │   ├── Item.cs                   # ItemDef (from JSON) + ItemStack
+  │   ├── ItemRegistry.cs           # JSON item loader via Godot FileAccess
+  │   └── Inventory.cs              # Weight-limited inventory with stacking
   ├── fov/
-  │   └── FieldOfView.kt           # DDA raycasting, fog of war bitmap overlay
+  │   └── FieldOfView.cs            # DDA raycasting, Image+ImageTexture fog overlay
   ├── localization/
-  │   └── Lang.kt                  # Завантаження lang_XX.json, Lang["key"] доступ
+  │   └── Lang.cs                   # JSON-based i18n via Godot FileAccess
   └── ui/
-      ├── HUD.kt                   # Бари HP/Голод/Спрага/Сила + підказки
-      ├── InventoryUI.kt           # Інвентар з кнопками Вжити/Кинути
-      └── ContainerUI.kt           # UI обшуку контейнера
+      ├── HUD.cs                    # ProgressBar stat bars + prompt label
+      ├── InventoryUI.cs            # Inventory panel (Eat/Drink/Use/Drop)
+      └── ContainerUI.cs            # Container loot panel (Take)
 
-src/commonMain/resources/
-  └── data/
-      ├── items.json               # Реєстр предметів з useAction/restore значеннями
-      ├── lang_en.json             # Англійська локалізація
-      └── lang_uk.json             # Українська локалізація
+assets/data/
+  ├── items.json                    # Item definitions with useAction/restore values
+  ├── lang_en.json                  # English localization
+  └── lang_uk.json                  # Ukrainian localization
 ```
 
 ---
