@@ -1,0 +1,41 @@
+{
+  "hud.hp": "HP",
+  "hud.hunger": "Голод",
+  "hud.thirst": "Спрага",
+  "hud.stamina": "Сила",
+
+  "prompt.search": "[E] Обшукати",
+  "prompt.died": "Ви загинули...",
+
+  "inventory.title": "Інвентар",
+  "inventory.empty": "Порожньо",
+  "inventory.drop": "Кинути",
+  "inventory.close": "[Tab] Закрити",
+
+  "container.close": "[E] Закрити",
+  "container.take": "Взяти",
+  "container.empty": "Порожньо",
+  "container.name.trash_can": "Смітник",
+  "container.name.wardrobe": "Шафа",
+  "container.name.kitchen": "Кухонна шафа",
+  "container.name.medkit": "Аптечка",
+  "container.name.garage": "Полиця",
+  "container.name.default": "Контейнер",
+
+  "action.eat": "З'їсти",
+  "action.drink": "Випити",
+  "action.use": "Вжити",
+
+  "unit.kg": "кг",
+
+  "item.canned_beans": "Консервовані боби",
+  "item.water_bottle": "Пляшка води",
+  "item.bandage": "Бинт",
+  "item.screwdriver": "Викрутка",
+  "item.flashlight": "Ліхтарик",
+  "item.newspaper": "Газета",
+  "item.empty_can": "Порожня банка",
+  "item.old_shirt": "Стара сорочка",
+  "item.kitchen_knife": "Кухонний ніж",
+  "item.matches": "Сірники"
+}

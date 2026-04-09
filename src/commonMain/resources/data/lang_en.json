@@ -1,0 +1,41 @@
+{
+  "hud.hp": "HP",
+  "hud.hunger": "Hunger",
+  "hud.thirst": "Thirst",
+  "hud.stamina": "Stamina",
+
+  "prompt.search": "[E] Search",
+  "prompt.died": "You died...",
+
+  "inventory.title": "Inventory",
+  "inventory.empty": "Empty",
+  "inventory.drop": "Drop",
+  "inventory.close": "[Tab] Close",
+
+  "container.close": "[E] Close",
+  "container.take": "Take",
+  "container.empty": "Empty",
+  "container.name.trash_can": "Trash Can",
+  "container.name.wardrobe": "Wardrobe",
+  "container.name.kitchen": "Kitchen Cabinet",
+  "container.name.medkit": "First Aid Kit",
+  "container.name.garage": "Shelf",
+  "container.name.default": "Container",
+
+  "action.eat": "Eat",
+  "action.drink": "Drink",
+  "action.use": "Use",
+
+  "unit.kg": "kg",
+
+  "item.canned_beans": "Canned Beans",
+  "item.water_bottle": "Water Bottle",
+  "item.bandage": "Bandage",
+  "item.screwdriver": "Screwdriver",
+  "item.flashlight": "Flashlight",
+  "item.newspaper": "Newspaper",
+  "item.empty_can": "Empty Can",
+  "item.old_shirt": "Old Shirt",
+  "item.kitchen_knife": "Kitchen Knife",
+  "item.matches": "Matches"
+}

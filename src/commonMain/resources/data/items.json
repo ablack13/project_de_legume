@@ -1,0 +1,99 @@
+[
+  {
+    "id": "canned_beans",
+    "name": "Canned Beans",
+    "description": "A can of beans. Can be eaten without cooking.",
+    "weight": 0.4,
+    "category": "food",
+    "stackable": true,
+    "maxStack": 5,
+    "useAction": "eat",
+    "hungerRestore": 25.0
+  },
+  {
+    "id": "water_bottle",
+    "name": "Water Bottle",
+    "description": "A half-empty bottle of drinking water.",
+    "weight": 0.5,
+    "category": "food",
+    "stackable": true,
+    "maxStack": 3,
+    "useAction": "drink",
+    "thirstRestore": 40.0,
+    "hungerRestore": 10.0
+  },
+  {
+    "id": "bandage",
+    "name": "Bandage",
+    "description": "A sterile bandage. Stops bleeding.",
+    "weight": 0.1,
+    "category": "medical",
+    "stackable": true,
+    "maxStack": 10,
+    "useAction": "heal",
+    "hpRestore": 15.0
+  },
+  {
+    "id": "screwdriver",
+    "name": "Screwdriver",
+    "description": "A Phillips screwdriver for minor repairs.",
+    "weight": 0.3,
+    "category": "tool",
+    "stackable": false,
+    "maxStack": 1
+  },
+  {
+    "id": "flashlight",
+    "name": "Flashlight",
+    "description": "A handheld flashlight. Extends vision at night.",
+    "weight": 0.2,
+    "category": "tool",
+    "stackable": false,
+    "maxStack": 1
+  },
+  {
+    "id": "newspaper",
+    "name": "Newspaper",
+    "description": "An old newspaper. Good for starting fires.",
+    "weight": 0.1,
+    "category": "junk",
+    "stackable": true,
+    "maxStack": 10
+  },
+  {
+    "id": "empty_can",
+    "name": "Empty Can",
+    "description": "An empty tin can.",
+    "weight": 0.1,
+    "category": "junk",
+    "stackable": true,
+    "maxStack": 10
+  },
+  {
+    "id": "old_shirt",
+    "name": "Old Shirt",
+    "description": "A worn cotton shirt. Can be torn into rags.",
+    "weight": 0.3,
+    "category": "clothing",
+    "stackable": false,
+    "maxStack": 1
+  },
+  {
+    "id": "kitchen_knife",
+    "name": "Kitchen Knife",
+    "description": "A regular kitchen knife. Better than nothing.",
+    "weight": 0.3,
+    "category": "weapon",
+    "stackable": false,
+    "maxStack": 1
+  },
+  {
+    "id": "matches",
+    "name": "Matches",
+    "description": "A box of matches for starting fires.",
+    "weight": 0.05,
+    "category": "tool",
+    "stackable": true,
+    "maxStack": 10
+  }
+]
